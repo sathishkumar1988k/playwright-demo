@@ -1,0 +1,17 @@
+{
+  "checkout": {
+    "customers": [
+      {
+        "firstName": "John",
+        "lastName": "Doe",
+        "postalCode": "12345"
+      },
+      {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "postalCode": "67890"
+      }
+    ]
+  },
+  "sortOptions": ["az", "za", "lohi", "hilo"]
+}

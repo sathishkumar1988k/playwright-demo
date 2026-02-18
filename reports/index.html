@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright Test Reports Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .report-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-status {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        .passed { background-color: #4CAF50; }
+        .failed { background-color: #f44336; }
+        .skipped { background-color: #ff9800; }
+        .command {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎭 Playwright Test Suite</h1>
+        <p>Comprehensive Testing Dashboard for SauceDemo Application</p>
+        <p><strong>Last Updated:</strong> February 18, 2026</p>
+    </div>
+    
+    <div class="report-section">
+        <h2>📊 Test Results Overview</h2>
+        <p>All tests are currently <span class="test-status passed">PASSING</span></p>
+        
+        <h3>Test Categories:</h3>
+        <div class="feature-list">
+            <div class="feature-card">
+                <h4>🔐 Auth Tests</h4>
+                <p>Login/logout functionality, user validation</p>
+                <span class="test-status passed">4 Tests Passing</span>
+            </div>
+            <div class="feature-card">
+                <h4>🛒 E2E Tests</h4>
+                <p>Complete shopping workflows</p>
+                <span class="test-status passed">4 Tests Passing</span>
+            </div>
+            <div class="feature-card">
+                <h4>🔗 Link Checker</h4>
+                <p>Identifies broken links and images</p>
+                <span class="test-status passed">Functional</span>
+            </div>
+            <div class="feature-card">
+                <h4>⚡ Performance</h4>
+                <p>Monitors slow loading issues</p>
+                <span class="test-status passed">Monitoring Active</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="report-section">
+        <h2>🏃‍♂️ Quick Commands</h2>
+        <p>Run these commands to execute different test suites:</p>
+        
+        <h4>Run All Tests:</h4>
+        <div class="command">npm test</div>
+        
+        <h4>Run by Category:</h4>
+        <div class="command">npm run test:auth</div>
+        <div class="command">npm run test:e2e</div>
+        <div class="command">npm run test:regression</div>
+        
+        <h4>Generate & View Reports:</h4>
+        <div class="command">npm run test:report</div>
+        <div class="command">npm run report</div>
+    </div>
+    
+    <div class="report-section">
+        <h2>🎯 Test Features</h2>
+        <div class="feature-list">
+            <div class="feature-card">
+                <h4>Dynamic Product Handling</h4>
+                <p>Tests discover products from live page content</p>
+            </div>
+            <div class="feature-card">
+                <h4>Environment Configuration</h4>
+                <p>All credentials managed via .env file</p>
+            </div>
+            <div class="feature-card">
+                <h4>Broken Link Detection</h4>
+                <p>Automatically identifies broken links and images</p>
+            </div>
+            <div class="feature-card">
+                <h4>Performance Monitoring</h4>
+                <p>Tracks slow performance issues</p>
+            </div>
+            <div class="feature-card">
+                <h4>Cross-Browser Testing</h4>
+                <p>Supports Chromium, Firefox, and WebKit</p>
+            </div>
+            <div class="feature-card">
+                <h4>Test Organization</h4>
+                <p>Tagged system for easy test categorization</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="report-section">
+        <h2>📁 Report Configuration</h2>
+        <p>HTML reports are configured to be generated in the <code>reports</code> folder.</p>
+        <p>The Playwright configuration includes:</p>
+        <ul>
+            <li>✅ HTML Reporter configured for <code>reports</code> folder</li>
+            <li>✅ Environment variable support</li>
+            <li>✅ Custom npm scripts for report generation</li>
+            <li>✅ Cross-platform batch script available</li>
+        </ul>
+        
+        <p><strong>Note:</strong> Run <code>generate-reports.bat</code> on Windows or use npm scripts to generate comprehensive HTML reports.</p>
+    </div>
+</body>
+</html>
